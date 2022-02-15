@@ -4,7 +4,10 @@
 
 ```sh
 $ sh run.sh
-#   poetry run uvicorn app.main:app --reload --host 0.0.0.0 --port 9000
+```
+
+```sh
+$ poetry run uvicorn app.main:app --reload --host 0.0.0.0 --port 9000
 ```
 
 ### Docker
@@ -22,11 +25,11 @@ $ docker compose up --build
 ## Request Commands
 
 ```sh 
-$ curl --request POST --url http://127.0.0.1:8000/api/v1/predict --header 'Content-Type: application/json' --data '{"input_text": "test"}'
+$ curl --request POST --url http://127.0.0.1:9000/api/v1/predict --header 'Content-Type: application/json' --data '{"input_text": "test"}'
 ```
 
 ```sh
-$ http POST http://127.0.0.1:8000/api/v1/predict input_text=テスト
+$ http POST http://127.0.0.1:9000/api/v1/predict input_text=テスト
 ```
 
 ## Development

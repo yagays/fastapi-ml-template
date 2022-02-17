@@ -2,13 +2,13 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 
-class BaseModel(ABC):
+class BaseMLModel(ABC):
     @abstractmethod
     def predict(self, req: Any) -> Any:
         raise NotImplementedError
 
 
-class MLModel(BaseModel):
+class MLModel(BaseMLModel):
     """Sample ML model"""
 
     def __init__(self, model_path: str) -> None:
